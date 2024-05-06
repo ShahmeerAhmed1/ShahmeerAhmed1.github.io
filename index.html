@@ -15,20 +15,19 @@ body {
 
 /* Style the header */
 header {
-  background-image: url("animeheader.avif");
+  background-image: url(header_bg.jpg);
   padding: 10px;
   text-align: center;
   font-size: 55px;
-  color:rgb(204, 255, 0);
+  color:#04AA6D;
 }
 
 /* Create two columns/boxes that floats next to each other */
 nav {
   float: left;
   width: 30%;
-  height: 300px; /* only for demonstration, should be removed */
-  background: #ccc;
   padding: 20px;
+ 
 }
 
 /* Style the list inside the menu */
@@ -37,12 +36,28 @@ nav ul {
   padding: 0;
 }
 
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
 article {
   float: left;
   padding: 20px;
   width: 70%;
-  background-color: #f1f1f1;
-  height: 300px; /* only for demonstration, should be removed */
+  
 }
 
 /* Clear floats after the columns */
@@ -54,7 +69,7 @@ section::after {
 
 /* Style the footer */
 footer {
-  background-color: #777;
+  background-color:#04AA6D ;
   padding: 10px;
   text-align: center;
   color: white;
@@ -72,28 +87,36 @@ footer {
 <body>
 
 <header>
-  <h2>Komix4U</h2>
+  <h2>Komix4U &reg;</h2>
 </header>
 
 <section>
   <nav>
     <ul>
-      <li><a href="Manga.html">Manga</a></li>
-      <li><a href="#">Manhwa</a></li>
-      <li><a href="#">Comics</a></li>
-      <li><a href="#">Graphic Novels</a></li>
+      <li><a class=active href="index.html">Home</a></li>
+      <li><a href="anga.html">Manga</a></li>
+      <li><a href="Manhwa.html">Manhwa</a></li>
+      <li><a href="Comics.html">Comics</a></li>
+      <li><a href="Gpcnovels.html">Graphic Novels</a></li>
     </ul>
   </nav>
   
   <article>
     <h1>Welcome</h1>
-    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+    <p>Welcome to the world of Comics, Graphic Novels, and Manga! Komix4U contains information of each of these graphic forms, give suggested readers, and provide reference material to get your research started.</p>
+    <p>There is a debate over whether or not graphic novels/comics/manga are real books and "count as reading." Hopefully after reviewing this guide you will be able to see the benefits in how illustrated works can convey just as much meaning and emotion as text-only books.</p>
+    <p>Before you start here are a few pointers:</p>
+    <ul>
+    <li>Graphic Novels is the umbrella term generally used to encompass all these of the graphic styles in the Libguide </li>
+    <li>Not all comics are about Superheroes and not all graphic novels follow the cartoon strip format</li>
+    <li>Manga are illustrated works from Japan that are done in black and white, not to be confused with the Korean Manhwa which are done in full color (most similar to Western Graphic Novels) </li>
+    <li>Some graphic novels start out as web comics and are eventually published as physical books that compile nonsequential strips, images, and stories in one book </li>
+    </ul>
   </article>
 </section>
 
 <footer>
-  <p>&copy; 2024 Komix4U All rights revserved.</p>
+  <p>&copy; 2024 Komix4U &reg; All rights revserved.</p>
 </footer>
 
 </body>
