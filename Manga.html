@@ -1,13 +1,157 @@
-<!DOCTYPE html> 
-<html>
-  <head>
-     <title>Manga-Komix4U &reg;</title>
-    <link rel="stylesheet" href="style1.css">
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Komix4U&reg;</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+/* Style the header */
+header {
+  background-color :#04AA6D;
+  padding: 10px;
+  text-align: center;
+  font-size: 55px;
+  color:white;
+}
 
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  padding: 20px;
+ 
+}
 
-      </body>
-    </html>
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color:#04AA6D ;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+h1 {
+        background-color :#04AA6D ;
+        color: white;
+        text-align: center;
+      }
+img {
+        height: 200px;
+        float: left;
+        padding: 15px;
+      }
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Komix4U&reg;</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a class=active  href="Manga.html">Manga</a></li>
+      <li><a href="Manhwa.html">Manhwa</a></li>
+      <li><a href="Comics.html">Comics</a></li>
+      <li><a href="Gpcnovels.html">Graphic Novels</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>A Quick Intoduction</h1>
+    <p></p>
+    
+    <h1> Informational Books </h1>
+    <img src="Understanding_comics.jpg"
+         alt="Understanding comics boook's coverpage">
+         <p>
+          "Understanding Comics" by Scott McCloud is a groundbreaking exploration of the art form of comics. In this seminal work, McCloud takes readers on a journey through the intricacies of comics, unraveling their unique language, structure, and cultural significance. Through a blend of insightful analysis, engaging illustrations, and a touch of humor, McCloud sheds light on how comics communicate ideas, emotions, and narratives unlike any other medium. Whether you're a seasoned comic enthusiast or a newcomer to the world of sequential art, "Understanding Comics" offers a captivating and enlightening perspective that will deepen your appreciation for this dynamic and versatile art form.
+         </p>
+         <ul>
+          <li>Publication date : 1994-04-27</li>
+          <li>Writer : Scott McCloud</li>
+          <li>Availability : Kindle, Libby</li>
+          </ul>
+         <img src="The art of drawing manga.jpg"
+         alt="The art of drawing manga boook's coverpage">   
+         <p>
+          "The Art of Drawing Manga" serves as a comprehensive guide for aspiring artists delving into the captivating world of manga illustration. With detailed step-by-step instructions, insightful tips, and inspiring examples, this book equips readers with the essential techniques and principles needed to master the unique style and storytelling aspects of manga. Whether you're a novice or seasoned artist, this book provides invaluable insights and exercises to help you bring your manga creations to life with authenticity and creativity. This book offers a captivating and enlightening perspective that will deepen your appreciation for this dynamic and versatile art form. 
+         </p>
+         <ul>
+          <li>Publication date : 2009-02-01</li>
+          <li>Writer : Ben Krefta</li>
+          <li>Availability : Kindle</li>
+          </ul>
+          
+          </ul>
+         <img src="drawinganimation.jpg"
+         alt="Drawing Animation boook's coverpage"> 
+         <p>"Drawing Animation" is a comprehensive guide that unlocks the secrets of bringing characters and stories to life through the art of animation. From fundamental drawing techniques to advanced principles of movement and storytelling, this book serves as a roadmap for aspiring animators, offering practical exercises, tips, and insights to unleash creativity and master the craft of animation.</p>
+      <ul>
+        <li>Publication date : 2015-10-14</li>
+          <li>Writer : Paul Hardman</li>
+          <li>Availability : Bookbub</li>
+      </ul>
+  </article>
+</section>
+
+<footer>
+  <p>&copy; 2024 Komix4U &reg; All rights revserved.</p>
+</footer>
+
+</body>
+</html>
