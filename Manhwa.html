@@ -1,153 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>Komix4U&reg;</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
+  <head>
+    <title>Komix4U&reg;</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
 
-/* Style the header */
-header {
-  background-color :#04AA6D;
-  padding: 10px;
-  text-align: center;
-  font-size: 55px;
-  color:white;
-}
+      /* Style the header */
+      header {
+        background-color :#04AA6D;
+        padding: 10px;
+        text-align: center;
+        font-size: 55px;
+        color:white;
+      }
 
-/* Create two columns/boxes that floats next to each other */
-nav {
-  float: left;
-  width: 30%;
-  padding: 20px;
- 
-}
+      /* Create two columns/boxes that floats next to each other */
+      nav {
+        float: left;
+        width: 30%;
+        padding: 20px;
 
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
+      }
 
-li a {
-  display: block;
-  color: #000;
-  padding: 8px 16px;
-  text-decoration: none;
-}
+      /* Style the list inside the menu */
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
 
-li a.active {
-  background-color: #04AA6D;
-  color: white;
-}
+      li a {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
 
-li a:hover:not(.active) {
-  background-color: #555;
-  color: white;
-}
+      li a.active {
+        background-color: #04AA6D;
+        color: white;
+      }
 
-article {
-  float: left;
-  padding: 20px;
-  width: 70%;
-  
-}
+      li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+      }
 
-/* Clear floats after the columns */
-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
+      article {
+        float: left;
+        padding: 20px;
+        width: 70%;
 
-/* Style the footer */
-footer {
-  background-color:#04AA6D ;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-h1 {
+      }
+      * {box-sizing:border-box}
+
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+
+      /* Hide the images by default */
+      .mySlides {
+        display: none;
+      }
+
+      /* Next & previous buttons */
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+      }
+
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active, .dot:hover {
+        background-color: #717171;
+      }
+
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+      }
+
+      /* Clear floats after the columns */
+      section::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Style the footer */
+      footer {
+        background-color:#04AA6D ;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+      h1 {
         background-color :#04AA6D ;
         color: white;
         text-align: center;
       }
-img {
+      img {
         height: 200px;
         float: left;
         padding: 15px;
       }
 
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-}
-</style>
-</head>
-<body>
+      /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+      @media (max-width: 600px) {
+        nav, article {
+          width: 100%;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
 
-<header>
-  <h2>Komix4U&reg;</h2>
-</header>
+    <header>
+      <h2>Komix4U&reg;</h2>
+    </header>
 
-<section>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="Manga.html">Manga</a></li>
-      <li><a class=active href="Manhwa.html">Manhwa</a></li>
-      <li><a href="Comics.html">Comics</a></li>
-      <li><a href="Gpcnovels.html">Graphic Novels</a></li>
-    </ul>
-    <h1>New Releases</h1>
-    <img src="0.jpg"
-    alt="NRs Poster">
-    <img src="5.jpg"
-    alt="NRs Poster">
-    <img src="3.jpg"
-    alt="NRs Poster">
-    <img src="2.jpg"
-    alt="NRs Poster">
-    <img src="0.jpg"
-    alt="NRs Poster">
-  </nav>
-  
-  <article>
-    <h1>What is Manhwa?</h1>
-    <p>Manhwa refers to South Korean comics or graphic novels. It encompasses a wide range of genres, styles, and storytelling techniques, similar to Japanese manga or Western comics. Manhwa has a rich history that dates back to the early 20th century but has experienced significant growth and evolution in recent decades, particularly with the rise of digital platforms and international popularity.</p>
-    <p>One notable aspect of manhwa is its diverse storytelling approaches, which often blend elements of traditional Korean culture with modern themes and influences from other cultures. From action-packed adventures and romantic comedies to fantasy epics and slice-of-life dramas, manhwa offers something for every reader. With its vibrant artwork, compelling narratives, and distinct cultural perspectives, manhwa continues to captivate audiences both in South Korea and around the world, contributing to the global popularity of East Asian comics and pop culture.</p>
-    <h1>Difference between Manga & Manhwa</h1>
-    <p>Manga and manhwa are both forms of comics, but they originate from different countries and have distinct characteristics.</p>
-    <p>1. Origin and Language: Manga is a term used for Japanese comics, while manhwa refers to South Korean comics. As such, manga is written and illustrated by Japanese creators, typically in Japanese language, while manhwa is created by South Korean artists and authors, often in Korean language.</p>
-    <p>2. Art Style: While there can be overlap, manga and manhwa often have slightly different art styles. Manga tends to feature more exaggerated facial expressions, larger eyes, and distinct character designs, influenced by traditional Japanese aesthetics. Manhwa, on the other hand, may have slightly more realistic proportions and drawing styles, often influenced by both traditional Korean art and Western comic book styles.</p>
-    <p>3. Reading Direction: One of the most noticeable differences is the reading direction. Manga is traditionally read from right to left, starting from what would typically be considered the "back" of the book in Western publishing. Manhwa, like Western comics, is read from left to right.</p>
-    <p>4. Themes and Storytelling: While both manga and manhwa cover a wide range of genres and themes, there are often cultural differences in the stories they tell. Manga may explore themes deeply rooted in Japanese culture, history, and mythology, while manhwa may incorporate elements of Korean culture, history, and folklore. Additionally, storytelling techniques and narrative structures may vary between the two mediums, influenced by their respective cultural backgrounds.</p>
-    <h1>Recommendations</h1>
-    <img src="SoloLeveling.jpg"
-    alt="SoloLeveling's Poster">
-    <p>In a world where dungeons have appeared, harboring monstrous creatures and untold treasures, Jin-Woo, a lowly ranked hunter, seeks to provide for his family. But his life takes a drastic turn when he finds himself trapped in a mysterious, deadly dungeon. Awakening to newfound powers, Jin-Woo becomes a "Player," able to see levels and stats like a game interface. With his newfound abilities, he embarks on a journey of self-discovery and strength, determined to rise from the weakest to the strongest, and unravel the mysteries of this perilous new world. This is the thrilling saga of "Solo Leveling."With his newfound abilities, he embarks on a journey of self-discovery and strength, determined to rise from the weakest to the strongest, and unravel the mysteries of this perilous new world. This is the thrilling saga of "Solo Leveling."With his newfound abilities, he embarks on a journey of self-discovery and strength, determined to rise from the weakest to the strongest, and unravel the mysteries of this perilous new world.</p>
-    <img src="Tbate.jpeg"
-    alt="The Beginning after the End's Poster">
-    <p>The Beginning afte the End includes, harboring monstrous creatures and untold treasures, Jin-Woo, a lowly ranked hunter, seeks to provide for his family. But his life takes a drastic turn when he finds himself trapped in a mysterious, deadly dungeon. Awakening to newfound powers, Jin-Woo becomes a "Player," able to see levels and stats like a game interface. With his newfound abilities, he embarks on a journey of self-discovery and strength, determined to rise from the weakest to the strongest, and unravel the mysteries of this perilous new world. This is the thrilling saga of "Solo Leveling."With his newfound abilities, he embarks on a journey of self-discovery and strength, determined to rise from the weakest to the strongest, and unravel the mysteries of this perilous new world. This is the thrilling saga of "Solo Leveling."With his newfound abilities, he embarks on a journey of self-discovery and strength, determined to rise from the weakest to the strongest, and unravel the mysteries of this perilous new world.</p>
-    <img src="Tower of God.jpg"
-    alt="Tower of God's Poster">
-    <p>Tower of GodIn a world where dungeons have appeared, harboring monstrous creatures and untold treasures, Jin-Woo, a lowly ranked hunter, seeks to provide for his family. But his life takes a drastic turn when he finds himself trapped in a mysterious, deadly dungeon. Awakening to newfound powers, Jin-Woo becomes a "Player," able to see levels and stats like a game interface. With his newfound abilities, he embarks on a journey of self-discovery and strength, determined to rise from the weakest to the strongest, and unravel the mysteries of this perilous new world. This is the thrilling saga of "Solo Leveling."With his newfound abilities, he embarks on a journey of self-discovery and strength, determined to rise from the weakest to the strongest, and unravel the mysteries of this perilous new world. This is the thrilling saga of "Solo Leveling."With his newfound abilities, he embarks on a journey of self-discovery and strength, determined to rise from the weakest to the strongest, and unravel the mysteries of this place.</p>
-  </article>
-</section>
+    <section>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Manga.html">Manga</a></li>
+          <li><a class=active href="Manhwa.html">Manhwa</a></li>
+          <li><a href="Comics.html">Comics</a></li>
+          <li><a href="Gpcnovels.html">Graphic Novels</a></li>
+        </ul>
+        <h1>New Releases</h1>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
 
-<footer>
-  <p>&copy; 2024 Komix4U &reg; All rights revserved.</p>
-</footer>
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="0.jpg" style="width:100%">
+            <div class="text">Caption Text</div>
+          </div>
 
-</body>
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="3.jpg" style="width:100%">
+            <div class="text">Caption Two</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="2.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+          </div>
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div> 
+      </nav>
+
+      <article>
+        <h1>What is Manhwa?</h1>
+        <p>Manhwa refers to South Korean comics or graphic novels. It encompasses a wide range of genres, styles, and storytelling techniques, similar to Japanese manga or Western comics. Manhwa has a rich history that dates back to the early 20th century but has experienced significant growth and evolution in recent decades, particularly with the rise of digital platforms and international popularity.</p>
+        <p>One notable aspect of manhwa is its diverse storytelling approaches, which often blend elements of traditional Korean culture with modern themes and influences from other cultures. From action-packed adventures and romantic comedies to fantasy epics and slice-of-life dramas, manhwa offers something for every reader. With its vibrant artwork, compelling narratives, and distinct cultural perspectives, manhwa continues to captivate audiences both in South Korea and around the world, contributing to the global popularity of East Asian comics and pop culture.</p>
+        <h1>Difference between Manga & Manhwa</h1>
+        <p>Manga and manhwa are both forms of comics, but they originate from different countries and have distinct characteristics.</p>
+        <p>1. Origin and Language: Manga is a term used for Japanese comics, while manhwa refers to South Korean comics. As such, manga is written and illustrated by Japanese creators, typically in Japanese language, while manhwa is created by South Korean artists and authors, often in Korean language.</p>
+        <p>2. Art Style: While there can be overlap, manga and manhwa often have slightly different art styles. Manga tends to feature more exaggerated facial expressions, larger eyes, and distinct character designs, influenced by traditional Japanese aesthetics. Manhwa, on the other hand, may have slightly more realistic proportions and drawing styles, often influenced by both traditional Korean art and Western comic book styles.</p>
+        <p>3. Reading Direction: One of the most noticeable differences is the reading direction. Manga is traditionally read from right to left, starting from what would typically be considered the "back" of the book in Western publishing. Manhwa, like Western comics, is read from left to right.</p>
+        <p>4. Themes and Storytelling: While both manga and manhwa cover a wide range of genres and themes, there are often cultural differences in the stories they tell. Manga may explore themes deeply rooted in Japanese culture, history, and mythology, while manhwa may incorporate elements of Korean culture, history, and folklore. Additionally, storytelling techniques and narrative structures may vary between the two mediums, influenced by their respective cultural backgrounds.</p>
+        <h1>Recommendations</h1>
+        <img src="SoloLeveling.jpg"
+             alt="SoloLeveling's Poster">
+        <p>In a world where dungeons have appeared, harboring monstrous creatures and untold treasures, Jin-Woo, a lowly ranked hunter, seeks to provide for his family. But his life takes a drastic turn when he finds himself trapped in a mysterious, deadly dungeon. Awakening to newfound powers, Jin-Woo becomes a "Player," able to see levels and stats like a game interface. With his newfound abilities, he embarks on a journey of self-discovery and strength, determined to rise from the weakest to the strongest, and unravel the mysteries of this perilous new world. This is the thrilling saga of "Solo Leveling."With his newfound abilities, he embarks on a journey of self-discovery and strength, determined to rise from the weakest to the strongest, and unravel the mysteries of this perilous new world. This is the thrilling saga of "Solo Leveling."With his newfound abilities, he embarks on a journey of self-discovery and strength, determined to rise from the weakest to the strongest, and unravel the mysteries of this perilous new world.</p>
+        <img src="Tbate.jpeg"
+             alt="The Beginning after the End's Poster">
+        <p>The Beginning afte the End includes, harboring monstrous creatures and untold treasures, Jin-Woo, a lowly ranked hunter, seeks to provide for his family. But his life takes a drastic turn when he finds himself trapped in a mysterious, deadly dungeon. Awakening to newfound powers, Jin-Woo becomes a "Player," able to see levels and stats like a game interface. With his newfound abilities, he embarks on a journey of self-discovery and strength, determined to rise from the weakest to the strongest, and unravel the mysteries of this perilous new world. This is the thrilling saga of "Solo Leveling."With his newfound abilities, he embarks on a journey of self-discovery and strength, determined to rise from the weakest to the strongest, and unravel the mysteries of this perilous new world. This is the thrilling saga of "Solo Leveling."With his newfound abilities, he embarks on a journey of self-discovery and strength, determined to rise from the weakest to the strongest, and unravel the mysteries of this perilous new world.</p>
+        <img src="Tower of God.jpg"
+             alt="Tower of God's Poster">
+        <p>Tower of GodIn a world where dungeons have appeared, harboring monstrous creatures and untold treasures, Jin-Woo, a lowly ranked hunter, seeks to provide for his family. But his life takes a drastic turn when he finds himself trapped in a mysterious, deadly dungeon. Awakening to newfound powers, Jin-Woo becomes a "Player," able to see levels and stats like a game interface. With his newfound abilities, he embarks on a journey of self-discovery and strength, determined to rise from the weakest to the strongest, and unravel the mysteries of this perilous new world. This is the thrilling saga of "Solo Leveling."With his newfound abilities, he embarks on a journey of self-discovery and strength, determined to rise from the weakest to the strongest, and unravel the mysteries of this perilous new world. This is the thrilling saga of "Solo Leveling."With his newfound abilities, he embarks on a journey of self-discovery and strength, determined to rise from the weakest to the strongest, and unravel the mysteries of this place.</p>
+      </article>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Komix4U &reg; All rights revserved.</p>
+    </footer>
+
+  </body>
 </html>
